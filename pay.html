@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paienment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1> Acces au groupe whatsapp</h1>
+    <h3> pour accerder au groupe whatsapp :</h3>
+    <h3> ETEPE1 : payer 1000f via Mobile Money </h3>
+    <h1> 653070295 nom: IDRISS KENNE </h1>
+    <p>
+       <strong>apres le paiement fait in clik sur le botton generercode 
+        vous receviez un code que vous inscriver pour rejoindre la page
+         ou le lien whatsapp est stocker</strong> 
+    </p>
+    <h3> NB: Fait votre Paienment avant de clique sur botton generer le code</h3>
+    <h3> merci pour votre attention et votre emmable honnetté</h3>
+    <button onclick="generercode()"> generer le code </button>
+    <p id="codeGenerer"></p>
+    <hr>
+    <h3> Entrez votre code :</h3>
+    <input type="text" id="code" placeholder="entrez le code">
+    <button onclick="verifiercode()"> Valider</button>
+    <script>
+        let codestocke = null ;
+        function generercode(){
+            codestocke = Math.floor(Math.random() * 1001);
+            document.getElementById("codeGenerer").innerText = 
+            "votre code : " + codestocke;
+        }
+        function verifiercode(){
+            let code = document.getElementById("code").value;
+            if(parseInt(code) === codestocke){
+                window.location.href = "secret.html"
+            }
+            else{
+                alert(" code invalide!")
+            }
+            if ( codestocke == null){
+                alert(" acces refuse")
+                window.location.href = "pay.html"
+            }
+        }
+    </script>
+   
+</body>
+</html>

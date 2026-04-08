@@ -1,0 +1,50 @@
+body{
+    margin: 15;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(202, 241, 234);
+    overflow: scroll;
+
+}
+h1{
+    margin-top: 20px;
+    text-decoration: underline;
+    text-align: center;
+}
+button{
+    background: rgb(247, 213, 60);
+    width: 200px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 10px;
+    color: white;
+}
+button:hover{
+    background: rgb(235, 110, 15);
+    transform: scale(1.05);
+}
+@keyframes bouger {
+    form {
+        transform: translateX(0) scale(1.05);
+    }
+    to{
+        transform: translateX(1000px) scale(1.05);
+    }
+}
+p{
+    text-indent: 20px;
+    text-align: justify;
+}
+.chance{
+    width: 200px;
+    height: 30px;
+    animation: bouger 10s infinite alternate;
+    position: relative;
+    background: blue;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+}
